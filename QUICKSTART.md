@@ -125,7 +125,7 @@ Examples:
    git add .
    git commit -m "Initial commit"
    git branch -M main
-   git remote add origin https://github.com/YOUR_USERNAME/op-fun.git
+   git remote add origin https://github.com/YOUR_USERNAME/fun-op.git
    git push -u origin main
    ```
 
@@ -135,7 +135,7 @@ Examples:
    - Automatic deployment!
 
 4. Your app will be live at:
-   `https://YOUR_USERNAME.github.io/op-fun/`
+   `https://YOUR_USERNAME.github.io/fun-op/`
 
 ## File Structure
 

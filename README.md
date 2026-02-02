@@ -4,13 +4,13 @@ A modern, interactive web application for students to practice addition and subt
 
 ## Live Demo
 
-**🚀 [https://gustavocovas.github.io/op-fun/](https://gustavocovas.github.io/op-fun/)**
+**🚀 [https://gustavocovas.github.io/fun-op/](https://gustavocovas.github.io/fun-op/)**
 
 Try it now:
-- [Addition Practice (Focus 5)](https://gustavocovas.github.io/op-fun/sum/5/1)
-- [Addition Practice (Focus 13)](https://gustavocovas.github.io/op-fun/sum/13/42)
-- [Subtraction Practice](https://gustavocovas.github.io/op-fun/sub/10/1)
-- [Subtraction with Negatives](https://gustavocovas.github.io/op-fun/sub/13/42/neg)
+- [Addition Practice (Focus 5)](https://gustavocovas.github.io/fun-op/sum/5/1)
+- [Addition Practice (Focus 13)](https://gustavocovas.github.io/fun-op/sum/13/42)
+- [Subtraction Practice](https://gustavocovas.github.io/fun-op/sub/10/1)
+- [Subtraction with Negatives](https://gustavocovas.github.io/fun-op/sub/13/42/neg)
 
 ## Features
 
@@ -216,7 +216,7 @@ Enter a number (1-100) to practice around
 4. Push to `main` branch - deployment happens automatically
 
 The workflow in `.github/workflows/deploy.yml` will build and deploy to:
-`https://gustavocovas.github.io/op-fun/`
+`https://gustavocovas.github.io/fun-op/`
 
 ### Manual Deployment
 
