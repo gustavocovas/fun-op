@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Print-specific styles */
+@media print {
+  /* Hide non-printable elements */
+  .no-print {
+    display: none !important;
+  }
+
+  /* 3-column layout for print - fit 50 problems on 1 page */
+  .problem-grid-screen {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1.2rem;
+    row-gap: 0.35rem;
+    max-width: 100%;
+  }
+
+  .problem-item {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    padding: 0.15rem 0;
+  }
+
+  /* Fixed width for operation alignment in print */
+  .problem-operation {
+    display: inline-block;
+    width: 60px;
+    text-align: right;
+  }
+
+  /* Compact equal sign spacing */
+  .problem-item > span:nth-child(2) {
+    margin: 0 0.3rem;
+  }
+
+  /* Make input fields print-friendly */
+  input[type="number"] {
+    color: transparent;
+    border-bottom: 1.2px solid black;
+    background: white;
+    width: 48px;
+    font-size: 14px;
+    padding: 1px 3px;
+  }
+
+  /* Remove color feedback for print */
+  .correct,
+  .incorrect {
+    background: white !important;
+    color: black !important;
+    border-color: black !important;
+  }
+
+  /* Optimize page for printing */
+  body {
+    background: white;
+    color: black;
+    font-size: 13px;
+  }
+
+  /* Compact spacing for print */
+  .problem-item {
+    font-size: 14px !important;
+  }
+
+  .problem-item span {
+    font-size: 14px !important;
+  }
+
+  /* Page setup for A4 - tighter margins */
+  @page {
+    size: A4;
+    margin: 1cm 1cm;
+  }
+
+  /* Ensure problems distribute across columns */
+  .problem-grid-container {
+    orphans: 2;
+    widows: 2;
+  }
+
+  /* Remove extra spacing from header/footer areas */
+  .problem-grid-container {
+    margin-top: 0;
+    padding-top: 0;
+  }
+}
+
+/* Remove spinner arrows from number inputs */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Screen-specific layout */
+@media screen {
+  /* 5-column layout for screen */
+  .problem-grid-screen {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem 1.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  /* Fixed width for operation to align equals and inputs */
+  .problem-operation {
+    display: inline-block;
+    width: 80px;
+    text-align: right;
+    font-size: 18px;
+  }
+
+  .problem-item {
+    font-size: 18px;
+  }
+
+  input[type="number"] {
+    @apply border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent px-3 py-2 w-20 text-center transition-colors;
+    font-size: 18px;
+  }
+
+  input[type="number"].correct {
+    @apply border-green-500 bg-green-50 ring-2 ring-green-500;
+  }
+
+  input[type="number"].incorrect {
+    @apply border-red-500 bg-red-50 ring-2 ring-red-500;
+  }
+
+  /* Responsive: fewer columns on smaller screens */
+  @media (max-width: 1200px) {
+    .problem-grid-screen {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  @media (max-width: 900px) {
+    .problem-grid-screen {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .problem-grid-screen {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
