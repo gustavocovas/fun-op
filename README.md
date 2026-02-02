@@ -2,6 +2,16 @@
 
 A modern, interactive web application for students to practice addition and subtraction with a focus-based approach and spaced repetition.
 
+## Live Demo
+
+**🚀 [https://gustavocovas.github.io/op-fun/](https://gustavocovas.github.io/op-fun/)**
+
+Try it now:
+- [Addition Practice (Focus 5)](https://gustavocovas.github.io/op-fun/sum/5/1)
+- [Addition Practice (Focus 13)](https://gustavocovas.github.io/op-fun/sum/13/42)
+- [Subtraction Practice](https://gustavocovas.github.io/op-fun/sub/10/1)
+- [Subtraction with Negatives](https://gustavocovas.github.io/op-fun/sub/13/42/neg)
+
 ## Features
 
 - **Two Operations**: Addition (Sum) and Subtraction with easy tab switching
@@ -206,7 +216,7 @@ Enter a number (1-100) to practice around
 4. Push to `main` branch - deployment happens automatically
 
 The workflow in `.github/workflows/deploy.yml` will build and deploy to:
-`https://yourusername.github.io/op-fun/`
+`https://gustavocovas.github.io/op-fun/`
 
 ### Manual Deployment
 
